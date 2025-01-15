@@ -41,8 +41,8 @@
             bindings = <
 &none  &none          &none          &none          &none            &none      &none          &none             &none           &none          &none          &none
 &none  &none          &none          &kp PAGE_DOWN  &none            &none      &none          &none             &kp UP_ARROW    &none          &kp LC(LS(P))  &none
-&none  &LEFT_SHIFT    &kp LG(LEFT)   &kp PAGE_UP    &kp LG(RIGHT)    &none      &none          &kp LEFT          &kp DOWN_ARROW  &kp RIGHT      &kp RET        &none
-&none  &LCTRL         &none          &none          &none            &none      &none          &kp C_VOLUME_DOWN         &kp C_VOLUME_UP           &kp K_MUTE          &none          &none
+&none  &kp LEFT_SHIFT    &kp LG(LEFT)   &kp PAGE_UP    &kp LG(RIGHT)    &none      &none          &kp LEFT          &kp DOWN_ARROW  &kp RIGHT      &kp RET        &none
+&none  &kp LCTRL         &none          &none          &none            &none      &none          &kp C_VOLUME_DOWN         &kp C_VOLUME_UP           &kp K_MUTE          &none          &none
                                      &none          &kp SPACE        &kp TAB    &kp RIGHT_GUI  &kp RET
                                                     &none            &none      &none
             >;
