@@ -59,12 +59,12 @@
             >;
         };
 
-        layer_3 {
+        Sym {
             bindings = <
 &none        &none         &none          &none          &none              &none              &none       &none         &none         &none         &none      &none
-&none        &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2   &none              &bt BT_CLR         &kp PLUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS  &none
-&none        &trans        &trans         &mkp MCLK      &trans             &none              &kp SLASH   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL  &none
-&bootloader  &trans        &kp LA(LG(Z))  &kp LA(LG(X))  &mkp LCLK          &mo 5              &kp PERIOD  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp N0     &bootloader
+&none        &kp EXCLAMATION     &kp DOLLAR   &kp LEFT_BRACE   &kp PIPE              &bt BT_CLR         &kp PLUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS  &none
+&none        &kp DOUBLE_QUOTES &kp AMPERSAND         &kp HASH      &trans             &none              &kp SLASH   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL  &none
+&none        &kp SINGLE_QUOTE &kp COLON  &kp LA(LG(X))  &mkp LCLK          &mo 5              &kp PERIOD  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp N0     &bootloader
                                           &none          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &mkp RCLK   &kp SPACE
                                                          &kp K_PLAY_PAUSE   &kp K_MUTE         &mkp LCLK
             >;
