@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -18,6 +17,22 @@
             bindings = <&kp ESC>;
             key-positions = <17 18>;
             layers = <0>;
+        };
+    };
+
+    behaviors {
+        double_equal: double_equal {
+            compatible = "zmk,behavior-send-string";
+            label = "==";
+            #binding-cells = <0>;
+            text = "==";
+        };
+
+        not_equal: not_equal {
+            compatible = "zmk,behavior-send-string";
+            label = "!=";
+            #binding-cells = <0>;
+            text = "!=";
         };
     };
 
@@ -39,10 +54,10 @@
 
         Nav {
             bindings = <
-&none  &none           &none         &none          &none          &none      &none          &none              &none            &none       &none          &none
-&none  &none           &none         &kp PAGE_DOWN  &none          &none      &none          &none              &kp UP_ARROW     &none       &kp LC(LS(P))  &none
-&none  &kp LEFT_SHIFT  &kp LG(LEFT)  &kp PAGE_UP    &kp LG(RIGHT)  &none      &none          &kp LEFT           &kp DOWN_ARROW   &kp RIGHT   &kp RET        &none
-&none  &kp LCTRL       &none         &none          &none          &none      &none          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &none          &none
+&none  &none           &none         &none          &none          &none      &none          &none              &none            &none       &none             &none
+&none  &none           &none         &kp PAGE_DOWN  &none          &none      &none          &none              &kp UP_ARROW     &none       &none             &none
+&none  &kp LEFT_SHIFT  &kp LG(LEFT)  &kp PAGE_UP    &kp LG(RIGHT)  &none      &none          &kp LEFT           &kp DOWN_ARROW   &kp RIGHT   &kp RET           &none
+&none  &kp LCTRL       &none         &none          &none          &none      &none          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &kp K_PLAY_PAUSE  &none
                                      &none          &kp SPACE      &kp TAB    &kp RIGHT_GUI  &kp RET
                                                     &none          &none      &none
             >;
@@ -61,12 +76,12 @@
 
         Sym {
             bindings = <
-&none        &none         &none          &none          &none              &none              &none       &none         &none         &none         &none      &none
-&none        &kp EXCLAMATION     &kp DOLLAR   &kp LEFT_BRACE   &kp PIPE              &bt BT_CLR         &kp PLUS    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS  &none
-&none        &kp DOUBLE_QUOTES &kp AMPERSAND         &kp HASH      &trans             &none              &kp SLASH   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL  &none
-&none        &kp SINGLE_QUOTE &kp COLON  &kp LA(LG(X))  &mkp LCLK          &mo 5              &kp PERIOD  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp N0     &bootloader
-                                          &none          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &mkp RCLK   &kp SPACE
-                                                         &kp K_PLAY_PAUSE   &kp K_MUTE         &mkp LCLK
+&none  &none              &none          &none          &none                 &none               &none              &none                  &none           &none        &none      &none
+&none  &kp EXCLAMATION    &kp QUESTION   &kp DOLLAR     &kp LEFT_BRACE        &kp PIPE            &none              &kp RIGHT_BRACE        &double_equal   &not_equal   &none      &none
+&none  &kp DOUBLE_QUOTES  &kp AMPERSAND  &kp HASH       &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp AT_SIGN     &kp PERCENT  &kp EQUAL  &none
+&none  &kp SINGLE_QUOTE   &kp COLON      &kp SEMICOLON  &kp BACKSLASH         &kp LESS_THAN       &kp GREATER_THAN   &kp SLASH              &kp UNDERSCORE  &kp TILDE    &none      &none
+                                         &none          &kp C_VOLUME_DOWN     &kp C_VOLUME_UP     &mkp RCLK          &kp SPACE
+                                                        &kp K_PLAY_PAUSE      &kp K_MUTE          &mkp LCLK
             >;
         };
 
