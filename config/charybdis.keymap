@@ -1,7 +1,7 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -24,9 +24,10 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+
             label = "HOMEROW_MODS";
         };
     };
@@ -36,12 +37,12 @@
 
         Base {
             bindings = <
-&kp ESC    &kp N1          &kp N2          &kp N3           &kp N4              &kp N5              &kp N6        &kp N7              &kp N8       &kp N9           &kp N0           &none
-&kp GRAVE  &kp Q           &kp W           &kp F            &kp P               &kp B               &kp J         &kp L               &kp U        &kp Y            &kp SEMICOLON    &none
-&kp TAB    &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LCTRL S      &hm LEFT_SHIFT T    &kp G               &kp M         &hm RIGHT_SHIFT N   &hm RCTRL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &none
-&none      &kp Z           &kp X           &kp C            &mt LS(LEFT_GUI) D  &kp V               &kp K         &mt LC(LEFT_ALT) H  &kp COMMA    &kp DOT          &lt 4 SLASH      &none
-                                           &lt 3 BACKSPACE  &lt 1 SPACE         &lt 2 TAB           &lt 2 TAB     &lt 3 RET
-                                                            &mt LEFT_GUI RET    &kp LS(LEFT_GUI)    &lt 1 DELETE
+&kp ESC    &kp N1          &kp N2          &kp N3           &kp N4              &kp N5              &kp N6             &kp N7              &kp N8       &kp N9           &kp N0           &none
+&kp GRAVE  &kp Q           &kp W           &kp F            &kp P               &kp B               &kp J              &kp L               &kp U        &kp Y            &kp SEMICOLON    &none
+&kp TAB    &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LCTRL S      &hm LEFT_SHIFT T    &kp G               &kp M              &hm RIGHT_SHIFT N   &hm RCTRL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &none
+&none      &kp Z           &kp X           &kp C            &mt LS(LEFT_GUI) D  &kp V               &kp K              &mt LC(LEFT_ALT) H  &kp COMMA    &kp DOT          &lt 4 SLASH      &none
+                                           &lt 3 BACKSPACE  &lt 1 SPACE         &lt 2 TAB           &lt 2 RIGHT_SHIFT  &lt 3 RET
+                                                            &kp LEFT_SHIFT      &kp LS(LEFT_GUI)    &lt 1 DELETE
             >;
 
             trackball-bindings = <&tmv_coarse>;
