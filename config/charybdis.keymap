@@ -20,6 +20,17 @@
         };
     };
 
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -27,7 +38,7 @@
             bindings = <
 &none      &kp N1          &kp N2          &kp N3           &kp N4              &kp N5              &kp N6        &kp N7              &kp N8       &kp N9           &kp N0           &none
 &kp GRAVE  &kp Q           &kp W           &kp F            &kp P               &kp B               &kp J         &kp L               &kp U        &kp Y            &kp SEMICOLON    &none
-&kp TAB    &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T    &kp G               &kp M         &mt RIGHT_SHIFT N   &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &none
+&kp TAB    &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LCTRL S      &hm LEFT_SHIFT T    &kp G               &kp M         &hm RIGHT_SHIFT N   &hm RCTRL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &none
 &none      &kp Z           &kp X           &kp C            &mt LS(LEFT_GUI) D  &kp V               &kp K         &mt LC(LEFT_ALT) H  &kp COMMA    &kp DOT          &lt 4 SLASH      &none
                                            &lt 3 BACKSPACE  &lt 1 SPACE         &lt 2 TAB           &lt 2 TAB     &lt 3 RET
                                                             &mt LEFT_GUI RET    &kp LS(LEFT_GUI)    &lt 1 DELETE
