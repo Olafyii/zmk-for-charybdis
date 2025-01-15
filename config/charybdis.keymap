@@ -26,12 +26,12 @@
 
         Base {
             bindings = <
-&none         &none          &none         &none &none &none &none &none &none &none &none &none 
-&none         &kp Q           &kp W           &kp F            &kp P             &kp B               &kp J          &kp L              &kp U        &kp Y            &kp SEMICOLON   &none 
-&none  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T  &kp G               &kp M          &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &none 
-&none       &kp Z           &kp X           &kp C            &kp D             &kp V               &kp K          &kp H              &kp COMMA    &kp DOT          &lt 4 SLASH      &none 
-                                                &lt 3 BACKSPACE  &lt 1 SPACE       &lt 2 TAB           &kp RIGHT_GUI  &lt 2 RET
-                                                                 &mt LEFT_GUI RET  &kp LS(LEFT_GUI)    &lt 1 DELETE
+&none  &none           &none           &none            &none             &none               &none          &none              &none        &none            &none            &none
+&none  &kp Q           &kp W           &kp F            &kp P             &kp B               &kp J          &kp L              &kp U        &kp Y            &kp SEMICOLON    &none
+&none  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LCTRL S      &mt LEFT_SHIFT T  &kp G               &kp M          &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O  &none
+&none  &kp Z           &kp X           &kp C            &kp D             &kp V               &kp K          &kp H              &kp COMMA    &kp DOT          &lt 4 SLASH      &none
+                                       &lt 3 BACKSPACE  &lt 1 SPACE       &lt 2 TAB           &kp RIGHT_GUI  &lt 2 RET
+                                                        &mt LEFT_GUI RET  &kp LS(LEFT_GUI)    &lt 1 DELETE
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -41,7 +41,7 @@
             bindings = <
 &kp LG(GRAVE)   &kp F1     &kp F2     &kp F3                &kp F4      &kp F5                  &kp F6         &kp F7        &kp F8          &kp F9         &kp F10        &kp F11
 &kp LG(TAB)     &kp LG(Q)  &kp LG(W)  &kp LG(E)             &kp LG(R)   &kp LG(T)               &kp LG(EQUAL)  &kp LG(LEFT)  &kp UP_ARROW    &kp LG(RIGHT)  &kp LC(LS(P))  &kp F12
-&kp LEFT_SHIFT  &kp LG(A)  &kp LG(S)  &kp LG(D)             &kp LG(F)   &kp LG(G)               &kp LG(MINUS)  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT      &kp RET        &none
+&kp LEFT_SHIFT  &none      &kp HOME   &kp LG(D)             &kp LG(F)   &kp LG(G)               &kp LG(MINUS)  &kp LEFT      &kp DOWN_ARROW  &kp RIGHT      &kp RET        &none
 &kp LEFT_ALT    &kp LG(Z)  &kp LG(X)  &kp LG(C)             &kp LG(V)   &kp LG(B)               &none          &none         &none           &none          &kp LG(SLASH)  &none
                                       &kp C_BRIGHTNESS_DEC  &none       &kp C_BRIGHTNESS_INC    &kp LS(RET)    &kp SPACE
                                                             &kp K_MUTE  &kp K_PLAY_PAUSE        &trans
