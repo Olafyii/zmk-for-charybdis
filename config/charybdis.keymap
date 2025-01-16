@@ -1,7 +1,7 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -76,10 +76,10 @@
 
         Sym {
             bindings = <
-&none  &none              &none          &none          &none                 &none               &none              &none                  &none           &none        &none      &none
-&none  &kp EXCLAMATION    &kp QUESTION   &kp DOLLAR     &kp LEFT_BRACE        &kp PIPE            &none              &kp RIGHT_BRACE        &none           &none        &none      &none
-&none  &kp DOUBLE_QUOTES  &kp AMPERSAND  &kp HASH       &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp AT_SIGN     &kp PERCENT  &kp EQUAL  &none
-&none  &kp SINGLE_QUOTE   &kp COLON      &kp SEMICOLON  &kp BACKSLASH         &kp LESS_THAN       &kp GREATER_THAN   &kp SLASH              &kp UNDERSCORE  &kp TILDE    &none      &none
+&none  &none              &none          &none          &none                 &none               &none              &none                  &none           &none        &none         &none
+&none  &kp EXCLAMATION    &kp QUESTION   &kp DOLLAR     &kp LEFT_BRACE        &kp PIPE            &kp CARET          &kp RIGHT_BRACE        &kp PLUS        &kp MINUS    &kp ASTERISK  &none
+&none  &kp DOUBLE_QUOTES  &kp AMPERSAND  &kp HASH       &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp AT_SIGN     &kp PERCENT  &kp EQUAL     &none
+&none  &kp SINGLE_QUOTE   &kp COLON      &kp SEMICOLON  &kp BACKSLASH         &kp LESS_THAN       &kp GREATER_THAN   &kp SLASH              &kp UNDERSCORE  &kp TILDE    &none         &none
                                          &none          &kp C_VOLUME_DOWN     &kp C_VOLUME_UP     &mkp RCLK          &kp SPACE
                                                         &kp K_PLAY_PAUSE      &kp K_MUTE          &mkp LCLK
             >;
