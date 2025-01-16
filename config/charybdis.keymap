@@ -1,7 +1,7 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -24,7 +24,7 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
@@ -40,7 +40,7 @@
 &kp ESC    &kp N1       &kp N2          &kp N3           &kp N4            &kp N5              &kp N6             &kp N7             &kp N8      &kp N9           &kp N0               &none
 &kp GRAVE  &kp Q        &kp W           &kp E            &kp R             &kp T               &kp Y              &kp U              &kp I       &kp O            &kp P                &none
 &kp TAB    &hm LCTRL A  &hm LEFT_ALT S  &hm LEFT_GUI D   &hm LEFT_SHIFT F  &kp G               &kp H              &hm RIGHT_SHIFT J  &hm RGUI K  &hm RIGHT_ALT L  &hm RCTRL SEMICOLON  &lt 5 CAPS
-&none      &kp Z        &kp X           &kp C            &kp V             &kp B               &kp N              &kp M              &kp COMMA   &kp DOT          &kp SLASH            &lt 4 CAPS
+&none      &kp Z        &kp X           &kp C            &kp V             &kp B               &kp N              &kp M              &kp COMMA   &kp DOT          &lt 5 SLASH          &lt 4 CAPS
                                         &lt 3 BACKSPACE  &lt 1 SPACE       &lt 2 TAB           &lt 2 RIGHT_SHIFT  &lt 3 RET
                                                          &kp LEFT_SHIFT    &kp LS(LEFT_GUI)    &lt 1 DELETE
             >;
@@ -102,11 +102,11 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mkp RCLK  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &mkp LCLK  &trans
-                        &trans  &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans  &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans  &mkp LCLK  &trans
+                        &trans  &trans  &trans    &trans  &mkp LCLK
                                 &trans  &trans    &trans
             >;
 
