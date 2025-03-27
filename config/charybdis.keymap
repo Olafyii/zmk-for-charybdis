@@ -90,7 +90,7 @@
         Scroll {
             bindings = <
 &trans  &trans          &trans      &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans     &trans
-&trans  &bt BT_CLR_ALL  &bt BT_NXT  &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans  &trans  &trans     &trans
 &trans  &trans          &trans      &trans  &trans  &trans    &trans  &trans     &trans  &trans  &mkp RCLK  &trans
 &trans  &trans          &trans      &trans  &trans  &trans    &trans  &trans     &trans  &trans  &mkp LCLK  &trans
                                     &trans  &trans  &trans    &trans  &mkp LCLK
