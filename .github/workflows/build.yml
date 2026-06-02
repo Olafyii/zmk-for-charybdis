@@ -2,4 +2,8 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    # Pinned to a pre-HWMv2 commit (2025-01-13) to match the Zephyr 3.5 fork
+    # referenced in config/west.yml. The @main workflow added a `west boards
+    # --format '{qualifiers}'` step that Zephyr 3.5's boards.py doesn't support,
+    # causing `KeyError: 'qualifiers'`. Do not bump without also moving to HWMv2.
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@700e9b264f3d6b9d8f39cfd0b0bcab89f1f1f697
